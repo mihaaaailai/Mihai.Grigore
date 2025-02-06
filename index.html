@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mihai Grigore - Technical Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google reCAPTCHA API script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    @font-face {
+      font-family: 'SF Pro Display';
+      src: local('SF Pro Display'), local('SFProDisplay-Regular'),
+           url('https://sf.abarba.me/SFProDisplay-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'SF Pro Display';
+      src: local('SF Pro Display Semibold'), local('SFProDisplay-Semibold'),
+           url('https://sf.abarba.me/SFProDisplay-Semibold.woff2') format('woff2');
+      font-weight: 600;
+      font-style: normal;
+    }
+    :root {
+      --primary-color: #1D1D1F;
+      --secondary-color: #F5F5F7;
+      --accent-color: #0071E3;
+      --font-primary: 'SF Pro Display', -apple-system, BlinkMacSystemFont,
+                    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+                    'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    body {
+      font-family: var(--font-primary);
+      line-height: 1.6;
+      color: var(--primary-color);
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .hero {
+      padding: 140px 0 100px;
+      background: linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97)),
+                  url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover;
+    }
+    .certification-card {
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 18px;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      height: 100%;
+    }
+    .certification-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    }
+    .certification-logo {
+      height: 40px;
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-size: 2.2rem;
+      letter-spacing: -0.03em;
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 12px;
+    }
+    .badge-custom {
+      background-color: var(--accent-color);
+      color: white;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="font-weight: 600;">Mihai Grigore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <!-- Adjusted order -->
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container text-center">
+      <h1 class="display-4 mb-4" style="font-size: 3.2rem; line-height: 1.1;">Certified Technology Professional</h1>
+      <p class="lead mb-4" style="font-size: 1.4rem; color: #666;">Combining technical expertise with strategic implementation</p>
+      <a href="#certifications" class="btn btn-primary btn-lg">View Credentials</a>
+    </div>
+  </section>
+
+  <!-- Experience Section (Now Appears First) -->
+  <section id="experience" class="py-5">
+    <div class="container">
+      <h2 class="section-title mb-5">Professional Experience</h2>
+      <div class="row g-4">
+        <!-- Salt Bank Experience -->
+        <div class="col-md-12">
+          <div class="card certification-card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <h4>IT Network Administrator</h4>
+                  <p class="text-muted mb-1">Salt Bank · Full-time</p>
+                  <p class="text-muted">Aug 2023 - Present</p>
+                </div>
+                <div class="text-end">
+                  <p class="text-muted mb-1">Bucharest, Romania</p>
+                  <p class="text-muted">Hybrid</p>
+                </div>
+              </div>
+              <div class="mb-3">
+                <span class="badge badge-custom">Azure Administration</span>
+                <span class="badge badge-custom">Fortinet Solutions</span>
+                <span class="badge badge-custom">Network Security</span>
+              </div>
+              <ul class="list-unstyled">
+                <li class="mb-3">✔ Global Administrator for Azure, managing and securing all resources and services within the Azure platform</li>
+                <li class="mb-3">✔ Implemented and maintained Fortinet solutions including FortiAuthenticator, FortiClient EMS, FortiMail, and FortiGate</li>
+                <li class="mb-3">✔ Conduct proactive system monitoring and preventive maintenance to ensure optimal IT infrastructure performance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Tor Project Experience -->
+        <div class="col-md-12">
+          <div class="card certification-card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <h4>Interpreter</h4>
+                  <p class="text-muted mb-1">The Tor Project · Full-time</p>
+                  <p class="text-muted">Apr 2023 - Present</p>
+                </div>
+                <div class="text-end">
+                  <p class="text-muted mb-1">United States</p>
+                  <p class="text-muted">Remote</p>
+                </div>
+              </div>
+              <ul class="list-unstyled">
+                <li class="mb-3">✔ As an active contributor to the Tor Project, I provide valuable assistance in translating essential information into English, ensuring accurate and coherent communication within our community.</li>
+                <li class="mb-3">✔ My work plays a significant role in facilitating effective communication, sharing knowledge, and broadening access to information.</li>
+              </ul>
+              <div class="mb-3">
+                <span class="badge badge-custom">Communication</span>
+                <span class="badge badge-custom">English</span>
+                <span class="badge badge-custom">Translation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIGI Experience -->
+        <div class="col-md-12">
+          <div class="card certification-card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <h4>System Administrator</h4>
+                  <p class="text-muted mb-1">DIGI · Full-time</p>
+                  <p class="text-muted">Mar 2023 - Aug 2023 · 6 mos</p>
+                </div>
+                <div class="text-end">
+                  <p class="text-muted mb-1">Bucharest, Romania</p>
+                  <p class="text-muted">Hybrid</p>
+                </div>
+              </div>
+              <ul class="list-unstyled">
+                <li class="mb-3">✔ Exercising meticulous oversight over the geographical positioning of strategic clientele and delivering comprehensive monthly SLA (Service Level Agreement) reports to ensure the highest level of service compliance.</li>
+                <li class="mb-3">✔ Vigilantly monitoring and promptly addressing alarms generated by equipment within the 3G/4G/5G networks, IP Backbone, and CBU (Centralized Baseband Unit) to uphold uninterrupted network operations.</li>
+                <li class="mb-3">✔ Engaging in seamless collaboration with the Support, NOC-IP, CBU, Backbone, NOC-3G, Field-3G, and Infrastructure departments to effectively mitigate network failures.</li>
+              </ul>
+              <div class="mb-3">
+                <span class="badge badge-custom">Cisco Systems Products</span>
+                <span class="badge badge-custom">L1</span>
+                <span class="badge badge-custom">Ticketing Systems</span>
+                <span class="badge badge-custom">Skynet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fntastic Experience -->
+        <div class="col-md-12">
+          <div class="card certification-card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <h4>Game Tester</h4>
+                  <p class="text-muted mb-1">Fntastic · Full-time</p>
+                  <p class="text-muted">Dec 2022 - Jul 2023 · 8 mos</p>
+                </div>
+                <div class="text-end">
+                  <p class="text-muted mb-1">Singapore</p>
+                  <p class="text-muted">Remote</p>
+                </div>
+              </div>
+              <ul class="list-unstyled">
+                <li class="mb-3">✔ The Game Tester evaluates and tests video games, identifying and reporting issues to ensure a high-quality gaming experience. They collaborate with the development team to provide valuable feedback and contribute to game improvement.</li>
+                <li class="mb-3">✔ Manage Community oversees online communities, fostering growth, engagement, and positive interactions. Responsibilities include moderating discussions, responding to inquiries, and strategizing for active participation. They cultivate a loyal user base, contributing to the community's success.</li>
+              </ul>
+              <div class="mb-3">
+                <span class="badge badge-custom">Communication</span>
+                <span class="badge badge-custom">Volunteering</span>
+                <span class="badge badge-custom">English</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Tehnica Experience -->
+        <div class="col-md-12">
+          <div class="card certification-card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div>
+                  <h4>Software Developer Internship</h4>
+                  <p class="text-muted mb-1">Soft Tehnica · Internship</p>
+                  <p class="text-muted">Jun 2022 - Aug 2022 · 3 mos</p>
+                </div>
+                <div class="text-end">
+                  <p class="text-muted mb-1">Bucharest, Romania</p>
+                  <p class="text-muted">On-site</p>
+                </div>
+              </div>
+              <ul class="list-unstyled">
+                <li class="mb-3">✔ One of my key skills is the ability to create objects within Maya and seamlessly export them to Unreal Engine.</li>
+                <li class="mb-3">✔ Moreover, during my training, I was introduced to fundamental concepts and principles of programming languages such as C# and VBA. While I may still be at a basic level of proficiency in these languages, I have gained a solid understanding of their syntax, data structures, and control flow, which equips me with a foundation to build upon for future programming endeavors.</li>
+              </ul>
+              <div class="mb-3">
+                <span class="badge badge-custom">Labelbox</span>
+                <span class="badge badge-custom">Unreal Engine 4</span>
+                <span class="badge badge-custom">C#</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section (Now Appears After Experience) -->
+  <section id="certifications" class="py-5">
+    <div class="container">
+      <h2 class="section-title mb-5">Professional Certifications</h2>
+      <div class="row g-4">
+        <!-- Cisco CCNA -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <img src="cisco-logo.png" alt="Cisco" class="certification-logo">
+              <h5>Cisco Certified Network Associate</h5>
+              <p class="text-muted">CCNA I | May 2023 - May 2026</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">Networking</span>
+                <span class="badge badge-custom">Cisco Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Meta Swift -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <img src="meta-logo.png" alt="Meta" class="certification-logo">
+              <h5>Swift Programming Fundamentals</h5>
+              <p class="text-muted">Meta | Jan 2025<br>ID 12QR8KN9XXLF</p>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#swiftModal">View Credential</button>
+            </div>
+          </div>
+        </div>
+        <!-- Google Digital Marketing -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <img src="google-logo.png" alt="Google" class="certification-logo">
+              <h5>Digital Marketing Fundamentals</h5>
+              <p class="text-muted">Google | Mar 2023<br>ID 9AK Y74 LN4</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">E-Commerce</span>
+                <span class="badge badge-custom">Communication</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Packt Networking -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <img src="packt-logo.png" alt="Packt" class="certification-logo">
+              <h5>Networking &amp; Cisco Devices</h5>
+              <p class="text-muted">Packt | Feb 2025<br>ID 6WUGZFYLKG0H</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">Networking</span>
+                <span class="badge badge-custom">Cisco</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Oracle Java -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <img src="oracle-logo.png" alt="Oracle" class="certification-logo">
+              <h5>Java Programming Learner</h5>
+              <p class="text-muted">Oracle | Oct 2022</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">Java</span>
+                <span class="badge badge-custom">OOP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cisco Linux -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <img src="cisco-logo.png" alt="Cisco" class="certification-logo">
+              <h5>Linux Essentials</h5>
+              <p class="text-muted">Cisco | Oct 2022</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">Linux</span>
+                <span class="badge badge-custom">System Administration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ECDL -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <img src="ecdl-logo.png" alt="ECDL" class="certification-logo">
+              <h5>European Computer Driving Licence</h5>
+              <p class="text-muted">ECDL Romania | Apr 2021<br>ID RO 71810</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">IT Fundamentals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Additional Certification Cards -->
+        <!-- 1. Cybersecurity Essentials -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <!-- Logo omitted -->
+              <h5>Cybersecurity Essentials</h5>
+              <p class="text-muted">Cisco Networking Academy | Issued Nov 2020</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">Cyber</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2. Get Connected -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <h5>Get Connected</h5>
+              <p class="text-muted">Cisco Networking Academy | Issued Nov 2020</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">Cisco Systems Products</span>
+                <span class="badge badge-custom">Cyber</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 3. Introduction to IoT -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <h5>Introduction to IoT</h5>
+              <p class="text-muted">Cisco Networking Academy | Issued Nov 2020</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">Inductive Output Tube (IOT)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 4. Oracle Database Foundations Certified Junior Associate -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <h5>Oracle Database Foundations Certified Junior Associate</h5>
+              <p class="text-muted">Oracle | Issued Nov 2020</p>
+            </div>
+          </div>
+        </div>
+        <!-- 5. Introduction to cybersecurity -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <h5>Introduction to cybersecurity</h5>
+              <p class="text-muted">Cisco Networking Academy | Issued Oct 2020</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">VMware</span>
+                <span class="badge badge-custom">Cyber</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-5">
+    <div class="container">
+      <h2 class="section-title mb-5">Education</h2>
+      <div class="row g-4">
+        <!-- University -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <h5>Automation and Applied Informatics</h5>
+              <p class="text-muted">2021 - 2025</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">University Degree</span>
+                <span class="badge badge-custom">Computer Science</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- High School -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <h5>The National Pedagogical College</h5>
+              <p class="text-muted">Regina Maria, French bilingual mate-info profile</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">High School</span>
+                <span class="badge badge-custom">Bilingual Program</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Telecom Academy -->
+        <div class="col-md-4">
+          <div class="card certification-card">
+            <div class="card-body">
+              <h5>Telecom Academy</h5>
+              <p class="text-muted">CCNA Certification Program</p>
+              <div class="mb-3">
+                <span class="badge badge-custom">Networking</span>
+                <span class="badge badge-custom">Cisco Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title mb-5">Contact Information</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card certification-card">
+            <div class="card-body">
+              <h4>Direct Contact</h4>
+              <p class="mb-3"><strong>Email:</strong><br> mihaigrigore2002@icloud.com</p>
+              <p class="mb-3"><strong>LinkedIn:</strong><br> linkedin.com/in/mihai-grigore-ubi</p>
+              <!-- Phone number protected by CAPTCHA -->
+              <div id="phone-container">
+                <!-- Button to trigger the CAPTCHA -->
+                <button id="show-phone-btn" class="btn btn-primary" onclick="showCaptcha()">
+                  Show Phone Number
+                </button>
+                <!-- The reCAPTCHA widget (initially hidden) -->
+                <div id="captcha-container" style="display: none; margin-top: 10px;">
+                  <div 
+                    class="g-recaptcha" 
+                    data-sitekey="YOUR_RECAPTCHA_SITE_KEY" 
+                    data-callback="verifyCallback">
+                  </div>
+                </div>
+                <!-- The actual phone number (hidden until CAPTCHA is solved) -->
+                <div id="phone-number" style="display: none; margin-top: 10px;">
+                  <p><strong>Phone:</strong><br> +40 752.327.059</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swift Modal -->
+  <div class="modal fade" id="swiftModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Swift Programming Certification</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="swift-certificate.jpg" class="img-fluid" alt="Swift Certification">
+            </div>
+            <div class="col-md-6">
+              <h5>Certification Details:</h5>
+              <ul>
+                <li>Mobile Development Fundamentals</li>
+                <li>Swift Syntax Mastery</li>
+                <li>iOS App Prototyping</li>
+              </ul>
+              <p class="text-muted small">Credential ID: 12QR8KN9XXLF</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript for reCAPTCHA -->
+  <script>
+    // Called when the "Show Phone Number" button is clicked.
+    function showCaptcha() {
+      // Hide the button and display the reCAPTCHA widget.
+      document.getElementById('show-phone-btn').style.display = 'none';
+      document.getElementById('captcha-container').style.display = 'block';
+    }
+
+    // This is the callback that reCAPTCHA will call after a successful challenge.
+    function verifyCallback(response) {
+      if (response) {
+        // CAPTCHA was solved successfully.
+        document.getElementById('captcha-container').style.display = 'none';
+        document.getElementById('phone-number').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
