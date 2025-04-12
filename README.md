@@ -24,9 +24,3 @@ Education: Information about Mihai's educational background, including degrees a
 Contact Information: Contact details with email, LinkedIn profile, and a phone number protected by Google reCAPTCHA.
 Modal for Certifications: A modal to display detailed information about specific certifications.
 Technologies Used
-
-HTML5: Structure of the web pages.
-CSS3: Styling of the web pages.
-Bootstrap 5: Responsive design and pre-styled components.
-Google reCAPTCHA: Protection for the phone number in the contact section.
-JavaScript: Interactivity and dynamic content, such as the reCAPTCHA functionality.
